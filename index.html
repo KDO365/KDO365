@@ -34,6 +34,8 @@
 
   /* Hero */
   .hero { background: var(--deep); color: var(--white); padding: clamp(3rem, 9vw, 6.5rem) 0 clamp(2.5rem, 7vw, 5rem); }
+  .hero .wrap { display: flex; align-items: center; justify-content: space-between; gap: 2rem 3rem; }
+  .hero-logo { width: clamp(140px, 24vw, 300px); height: auto; flex-shrink: 0; }
   .hero h1 {
     font-family: var(--serif);
     font-weight: 700;
@@ -118,6 +120,7 @@
     .slot { grid-template-columns: 1fr; gap: 0.25rem; }
     .parallel { grid-column: 1; grid-template-columns: 1fr; }
     .location .wrap { grid-template-columns: 1fr; }
+    .hero .wrap { flex-direction: column; align-items: flex-start; }
     .slot.pause { margin-inline: -0.75rem; padding-inline: 0.75rem; }
   }
 </style>
@@ -126,9 +129,12 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Kennisdeling Onderwijs 365</h1>
-    <p class="when"><strong>Woensdag 9 december</strong>, Erasmus Universiteit Rotterdam<br>Senaatszaal, Erasmus Building, Campus Woudestein</p>
-    <a class="btn" href="https://forms.cloud.microsoft/e/hmHYU5GTa5">Ik meld mij aan voor de KDO 365</a>
+    <div class="hero-text">
+      <h1>Kennisdeling Onderwijs 365</h1>
+      <p class="when"><strong>Woensdag 9 december</strong>, Erasmus Universiteit Rotterdam<br>Senaatszaal, Erasmus Building, Campus Woudestein</p>
+      <a class="btn" href="https://forms.cloud.microsoft/e/hmHYU5GTa5">Ik meld mij aan voor de KDO 365</a>
+    </div>
+    <img class="hero-logo" src="images/kdo-logo.png" alt="Logo Kennisdeling Onderwijs 365">
   </div>
 </header>
 
