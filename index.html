@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kennisdeling Onderwijs 365 – woensdag 9 december, Erasmus Universiteit Rotterdam</title>
+<meta name="description" content="Programma, locatie en aanmelding voor Kennisdeling Onderwijs 365 (KDO 365) op woensdag 9 december bij Erasmus Universiteit Rotterdam, georganiseerd met SURF.">
+<style>
+  :root {
+    --ink: #14211d;
+    --muted: #4b5b56;
+    --mist: #eef3f1;
+    --line: #c9d6d1;
+    --green: #0c8066;
+    --deep: #07382e;
+    --white: #ffffff;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--white);
+  }
+  img { max-width: 100%; height: auto; }
+  a { color: var(--green); text-underline-offset: 0.15em; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid #f2c200; outline-offset: 3px; }
+  .wrap { width: min(100% - 2.5rem, 62rem); margin-inline: auto; }
+
+  /* Hero */
+  .hero { background: var(--deep); color: var(--white); padding: clamp(3rem, 9vw, 6.5rem) 0 clamp(2.5rem, 7vw, 5rem); }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 8vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.25rem;
+    max-width: 14ch;
+  }
+  .hero .when { font-size: clamp(1.1rem, 2.6vw, 1.4rem); margin: 0 0 2rem; color: #cfe6df; }
+  .hero .when strong { color: var(--white); }
+  .btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--deep);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+  }
+  .btn:hover { background: #dff1ea; }
+  .btn.solid { background: var(--green); color: var(--white); }
+  .btn.solid:hover { background: #0a6b55; }
+
+  /* Organisatoren */
+  .partners { border-bottom: 1px solid var(--line); padding: 1.75rem 0; }
+  .partners .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 2.5rem; }
+  .partners img { height: 64px; width: auto; object-fit: contain; }
+
+  /* Video */
+  .video { padding: clamp(2rem, 5vw, 3.5rem) 0 0; }
+  .video-frame { position: relative; aspect-ratio: 16 / 9; background: var(--mist); }
+  .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* Programma */
+  section.block { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.15;
+    margin: 0 0 1.75rem;
+  }
+  .programme { border-top: 2px solid var(--ink); }
+  .slot {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 0.5rem 2rem;
+    padding: 1.35rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .slot .time { font-weight: 700; font-variant-numeric: tabular-nums; margin: 0; }
+  .slot .room { display: block; font-weight: 400; color: var(--muted); font-size: 0.95rem; }
+  .slot h3 { font-size: 1.15rem; line-height: 1.3; margin: 0 0 0.35rem; }
+  .slot p { margin: 0; max-width: 68ch; }
+  .slot.pause { background: var(--mist); padding-inline: 1rem; margin-inline: -1rem; }
+  .slot.pause h3 { font-weight: 600; margin: 0; }
+
+  .parallel { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 0.5rem; }
+  .session { border-left: 4px solid var(--green); padding-left: 1rem; }
+  .session .label { display: block; font-size: 0.9rem; font-weight: 700; color: var(--green); margin-bottom: 0.2rem; }
+  .session h4 { font-size: 1.02rem; line-height: 1.3; margin: 0 0 0.4rem; }
+  .session p { font-size: 0.95rem; margin: 0; }
+
+  /* Locatie */
+  .location { background: var(--mist); }
+  .location .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+  .location address { font-style: normal; margin: 0 0 1.25rem; }
+  .location ul { list-style: none; padding: 0; margin: 0; }
+  .location li + li { margin-top: 0.4rem; }
+  .location img { display: block; width: 100%; background: var(--line); min-height: 8rem; }
+
+  /* Aanmelden */
+  .signup { text-align: center; }
+  .signup h2 { margin-bottom: 1.5rem; }
+
+  footer { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 52rem) {
+    .slot { grid-template-columns: 1fr; gap: 0.25rem; }
+    .parallel { grid-column: 1; grid-template-columns: 1fr; }
+    .location .wrap { grid-template-columns: 1fr; }
+    .slot.pause { margin-inline: -0.75rem; padding-inline: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Kennisdeling Onderwijs 365</h1>
+    <p class="when"><strong>Woensdag 9 december</strong>, Erasmus Universiteit Rotterdam<br>Senaatszaal, Erasmus Building, Campus Woudestein</p>
+    <a class="btn" href="https://forms.cloud.microsoft/e/hmHYU5GTa5">Ik meld mij aan voor de KDO 365</a>
+  </div>
+</header>
+
+<div class="partners">
+  <div class="wrap">
+    <!-- Zet de logo's in de map "images" met deze bestandsnamen -->
+    <img src="images/logo-eur.png" alt="Erasmus Universiteit Rotterdam">
+    <img src="images/logo-instellingen.png" alt="Instellingen">
+    <img src="images/logo-surf.png" alt="SURF">
+  </div>
+</div>
+
+<main>
+
+  <div class="video">
+    <div class="wrap">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/jrdHCgPbGPI"
+                title="Video over Kennisdeling Onderwijs 365"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="programma">
+    <div class="wrap">
+      <h2>Programma</h2>
+      <div class="programme">
+
+        <div class="slot">
+          <p class="time">10.00 – 10.15<span class="room">Senaatszaal</span></p>
+          <div>
+            <h3>Welkom bij Erasmus Universiteit Rotterdam</h3>
+            <p>Daniel de Vogel (Erasmus Universiteit Rotterdam) en Wim van Vliet (SURF) heten u welkom en nemen de dag met u door.</p>
+          </div>
+        </div>
+
+        <div class="slot">
+          <p class="time">10.15 – 11.00<span class="room">Senaatszaal</span></p>
+          <div>
+            <h3>What’s new in Microsoft Education</h3>
+            <p>Xander Kupers, Senior AI Business Specialist, staat stil bij de Microsoft roadmap. Wat is er nieuw, wat komt er aan en hoe kan het onderwijs er haar voordeel mee doen?</p>
+          </div>
+        </div>
+
+        <div class="slot pause">
+          <p class="time">11.00 – 11.15</p>
+          <h3>Korte break</h3>
+        </div>
+
+        <div class="slot">
+          <p class="time">11.15 – 12.00<span class="room">Senaatszaal</span></p>
+          <div>
+            <h3>What’s new in Microsoft Education – voorbeeldcases voor het onderwijs</h3>
+            <p>Wing-Kan Lai, Microsoft 365 Architect, gaat in op de nieuwste Microsoft ontwikkelingen aan de hand van praktijkcases, zoals de inzet van SharePoint Agents waarmee gebruikers in gewone taal vragen stellen aan SharePoint bestanden.</p>
+          </div>
+        </div>
+
+        <div class="slot pause">
+          <p class="time">12.00 – 12.45</p>
+          <h3>Lunch en netwerken</h3>
+        </div>
+
+        <div class="slot">
+          <p class="time">12.45 – 13.30</p>
+          <div>
+            <h3>Keuzesessies ronde 1</h3>
+          </div>
+          <div class="parallel">
+            <article class="session">
+              <span class="label">Keuzesessie 1</span>
+              <h4>Zo pakt MBO Amersfoort applicatie-integratie aan</h4>
+              <p>Bij MBO Amersfoort wordt gewerkt aan een IT-platform waarin onderwijssystemen en applicaties op basis van open standaarden op een uniforme manier gegevens uitwisselen.</p>
+            </article>
+            <article class="session">
+              <span class="label">Keuzesessie 2</span>
+              <h4>De SharePoint Health Checker van de Erasmus Universiteit Rotterdam</h4>
+              <p>Hoe staat jouw SharePoint omgeving ervoor? Wat is het totaal aan bestanden? Zijn er dubbele bestanden, dubbele en lege mappen? Welke bestandstypen vind je er? Wat is de padlengte naar mappen? De SharePoint Health Checker geeft de antwoorden op deze en meer vragen.</p>
+            </article>
+            <article class="session">
+              <span class="label">Keuzesessie 3</span>
+              <h4>Digitale soevereiniteit</h4>
+              <p>Het geopolitieke landschap is de afgelopen jaren sterk veranderd. Een gevolg is dat we ons meer dan ooit bewust zijn van de (digitale) afhankelijkheid van Big Tech, met name van Amerikaanse softwareleveranciers. In Nederland, in het onderwijs en bij de overheid, gaat veel aandacht uit naar alternatieve oplossingen waarmee we onze afhankelijkheid mogelijk kunnen verkleinen. Oplossingen die we naast en misschien wel in plaats van Big Tech oplossingen kunnen gebruiken. Hoe haalbaar is dit, willen we dit wel of moeten wij dit willen? Rob Vos deelt zijn inzichten.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="slot pause">
+          <p class="time">13.30 – 13.45</p>
+          <h3>Pauze en zaalwissel</h3>
+        </div>
+
+        <div class="slot">
+          <p class="time">13.45 – 14.30</p>
+          <div>
+            <h3>Don’t Mention the VAR</h3>
+            <p>Don’t Mention the VAR is een verhaal voor mensen die van voetbal houden én voor mensen die van het leven houden. Dit is een verhaal over de VAR, de Video Assistant Referee bij voetbal. Maar het is ook een verhaal over de VAR in jouw leven. Over de VAR in jouw organisatie. Over die mensen achter de schermen, die regels afdwingen. Over de impact van technologie. Over de macht van Big Tech. Over dingen doen omdat ze mogelijk zijn, niet omdat ze iets beters mogelijk maken. Over de toenemende invloed van het denken in énen en nullen. Over onzekerheid, angst en behoefte aan controle. Over de doodlopende weg van het streven naar perfectie. Over onze moeizame strijd om met technologie dingen écht beter te maken.</p>
+          </div>
+        </div>
+
+        <div class="slot pause">
+          <p class="time">14.30 – 14.45</p>
+          <h3>Pauze en zaalwissel</h3>
+        </div>
+
+        <div class="slot">
+          <p class="time">14.45 – 15.30</p>
+          <div>
+            <h3>Keuzesessies ronde 2</h3>
+          </div>
+          <div class="parallel">
+            <article class="session">
+              <span class="label">Keuzesessie 4</span>
+              <h4>AI Agents voor Modulair Flexibel Onderwijs bij Zadkine</h4>
+              <p>Modulair en Flexibel Onderwijs (MFO) is een onderwijsconcept waarbij mbo-instellingen hun opleidingen opdelen in losstaande, afgeronde modules en studenten meer regie geven over wat, waar, wanneer en in welk tempo zij leren. Robbert Nijenhuis, Onderwijskundige bij Zadkine, heeft AI Agents ontwikkeld waarmee opleidingen bij Zadkine MFO op een snelle en gestandaardiseerde manier gestalte kunnen geven.</p>
+            </article>
+            <article class="session">
+              <span class="label">Keuzesessie 5</span>
+              <h4>Een datagovernance blauwdruk voor instellingen in het mbo, hbo en wo</h4>
+              <p>SURF en instellingen uit het mbo, hbo en wo werken samen aan een blauwdruk voor datagovernance waarin informatieveiligheid en digitale weerbaarheid centraal staan. Waar staat het projectteam momenteel met de blauwdruk? Wat betekent het voor de aanpak van dataclassificatie en -labeling?</p>
+            </article>
+            <article class="session">
+              <span class="label">Keuzesessie 6</span>
+              <h4>Hoe levert een AI-pilot wél voordeel op?</h4>
+              <p>Peter Troxler, Lector Future of Working bij Hogeschool Rotterdam, ging tijdens de KDO 365 van 5 juni in op redenen waarom veel AI-pilots weinig opleveren. Maar er is hoop! Wing-Kan Lai, Microsoft 365 Architect, beschrijft een AI-gestuurd proces waarin met Copilot Studio en processtappen uit de MORA precies die 5 stappen worden gekozen om van een idee naar een werkend prototype te komen.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="slot">
+          <p class="time">15.30 – 15.45<span class="room">Senaatszaal</span></p>
+          <h3>Afsluiting</h3>
+        </div>
+
+        <!-- Let op: in de originele pagina stond hier 14.45 – 16.30. Controleer of 15.45 – 16.30 bedoeld is. -->
+        <div class="slot pause">
+          <p class="time">14.45 – 16.30<span class="room">Het Paviljoen</span></p>
+          <h3>Borrel en napraten</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block location" id="locatie">
+    <div class="wrap">
+      <div>
+        <h2>Locatie</h2>
+        <p>Het evenement vindt plaats op woensdag 9 december bij Erasmus Universiteit Rotterdam, <strong>Erasmus Building</strong>.</p>
+        <address>
+          Campus Woudestein<br>
+          Burgemeester Oudlaan 50<br>
+          3062 PA Rotterdam
+        </address>
+        <ul>
+          <li><a href="https://www.eur.nl/campus/locaties/campus-woudestein">Route en bereikbaarheid campus Woudestein</a></li>
+          <li><a href="https://www.eur.nl/en/media/2026-07-bew230794campusplattegrondv6-def">Plattegrond campus Woudestein</a></li>
+        </ul>
+      </div>
+      <img src="images/campus-woudestein.jpg" alt="Campus Woudestein van Erasmus Universiteit Rotterdam">
+    </div>
+  </section>
+
+  <section class="block signup" id="aanmelden">
+    <div class="wrap">
+      <h2>Je kunt je nog aanmelden</h2>
+      <a class="btn solid" href="https://forms.cloud.microsoft/e/hmHYU5GTa5">Ik meld mij aan voor de KDO 365</a>
+    </div>
+  </section>
+
+  <!--
+    Het blok "Wat deelnemers zeggen" uit de Power Pages-versie is hier weggelaten:
+    de namen en quotes leken sjabloontekst. Voeg echte getuigenissen toe als je die hebt.
+  -->
+
+</main>
+
+<footer>
+  <div class="wrap">Kennisdeling Onderwijs 365 · Erasmus Universiteit Rotterdam en SURF</div>
+</footer>
+
+</body>
+</html>
